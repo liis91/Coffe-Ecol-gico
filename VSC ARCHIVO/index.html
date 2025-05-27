@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Ecológico</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+        }
+        iframe {
+            width: 100%;
+            border: none;
+        }
+        #header-frame {
+            height: 150px;
+            overflow: hidden;
+        }
+        #menu-frame {
+            height: 50px; 
+            overflow: hidden;
+        }
+        #content-frame {
+            height: calc(100vh - 150px); 
+        }
+    </style>
+</head>
+<body>
+    <iframe id="header-frame" name="header-frame" src="encabezado.html" scrolling="no"></iframe>
+    <iframe id="menu-frame" name="menu-frame" src="menu.html" scrolling="no"></iframe>
+    <iframe id="content-frame" name="content-frame" src="Inicio.html" scrolling="yes"></iframe>
+</body>
+</html>
