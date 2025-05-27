@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar Pedido</title>
+    <link rel="stylesheet" href="pedid.css">
+</head>
+<body>
+    <h2>Realiza tu Pedido</h2>
+    <form action="#" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo electrónico" required>
+
+        <label for="direccion">Dirección de Envío:</label>
+        <textarea id="direccion" name="direccion" rows="3" placeholder="Ingresa tu dirección completa" required></textarea>
+
+        <label for="producto">Producto:</label>
+        <select id="producto" name="producto" required>
+            <option value="">Selecciona un producto</option>
+            <option value="cafe-grano">Café en Grano ($10)</option>
+            <option value="cafe-molido">Café Molido ($8)</option>
+            <option value="capsulas-cafe">Cápsulas de Café ($12)</option>
+            <option value="brownie">Brownie de Café ($5)</option>
+            <option value="cheesecake">Cheesecake de Café ($6)</option>
+            <option value="cheesecake">Licor Crema de Café ($15)</option>
+            <option value="cheesecake">Espresso ($4)</option>
+            <option value="cheesecake">Capuchino ($5)</option>
+            <option value="cheesecake">Muffin de café ($3)</option>
+        </select>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" placeholder="Ingresa la cantidad" min="1" required>
+
+        <button type="submit" onclick="IContador()">Hacer Pedido</button>
+        <button type="reset">Borrar Datos</button>
+        <p>Pedidos realizados: <span id="contador">0</span></p>
+    </form>
+    
+    <script>
+    let contador = localStorage.getItem("contadorPedidos") || 0;
+    document.getElementById("contador").textContent = contador;
+
+    function IContador() {
+        contador++;
+        document.getElementById("contador").textContent = contador;
+        localStorage.setItem("contadorPedidos", contador);
+    }
+</script>
+</body>
+</html>

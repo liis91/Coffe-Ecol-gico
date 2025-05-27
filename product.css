@@ -1,0 +1,22 @@
+body {
+    background-image: url("coffe_jume.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+table {
+    margin: auto;
+    width: 80%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+th, td {
+    border: 2px solid #ddd;
+    text-align: center;
+    padding: 15px;
+}
+th {
+    background-color: #3a2009;
+    color: white;
+}

@@ -1,0 +1,22 @@
+body{
+            background-image: URL("coffe_jume.jpg")no-repeat center center fixed;
+            background-size: cover;
+        }
+        h3, h4{
+            text-align: left;
+        }
+        p{
+            text-align: left;
+        }
+        .Ba {
+            height: 215px;
+            width: 275px; 
+            float: left; 
+            margin-right: 10px; 
+        }
+        #Taza{
+            height: 115px;
+            width: 175px; 
+            float: right; 
+            margin-right: 10px; 
+        }
